@@ -1,0 +1,3 @@
+ Create componant: npx generate-react-cli component search
+
+CRUD LINK: https://devooti.com/react-crud-operations-using-php-api-and-mysqli/
