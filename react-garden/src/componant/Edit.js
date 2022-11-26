@@ -23,8 +23,7 @@ const Edit = () => {
         console.log(res.data.userlist.userdata)
         setuser(res.data.userlist.userdata[0]);
         setloaduser(true);
-        navigate(`/Users`);
-        return;
+       
       })
 
       

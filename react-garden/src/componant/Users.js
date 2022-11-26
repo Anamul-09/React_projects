@@ -58,7 +58,8 @@ export default function Users() {
     </div>
     
 
-    <Link to="/insert" className='btn'> Create User </Link>
+    <Link to="/insert" className='btn btn-primary'> Create User </Link>
+    <hr/>
     <div className="container-xxl py-5">
    <h1>Users List</h1>
    <table className=' table table-striped'>
@@ -75,8 +76,8 @@ export default function Users() {
         <td>{item.name}</td>
         <td>{item.email}</td>
         <td>
-          <span><Link  to={`Edit/${item.id}`} className="btn default-btn"> Edit </Link></span>
-          <span onClick={() => deleteConfirm(item.id)} className="btn default-btn"> Delete </span> </td>
+          <span><Link  to={`Edit/${item.id}`} className="btn btn-primary mx-2"> Edit </Link></span>
+          <span  onClick={() => deleteConfirm(item.id)} className="btn btn-danger"> Delete </span> </td>
     </tr>
     
    ))}
