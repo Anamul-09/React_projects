@@ -9,7 +9,7 @@ if(isset($data->userids)
 		
 	$userids = mysqli_real_escape_string($db_conn, trim($data->userids));
 
-  $add = mysqli_query($db_conn,"delete from user where user_id='$userids'");
+  $add = mysqli_query($db_conn,"delete from users where id='$userids'");
 
 	if($add){
 		echo json_encode(["success"=>true]);

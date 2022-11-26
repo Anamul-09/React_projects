@@ -15,7 +15,7 @@ if(isset($data->username)
 	$useremail = mysqli_real_escape_string($db_conn, trim($data->useremail));
 	$userids = mysqli_real_escape_string($db_conn, trim($data->userids));
 
-  $add = mysqli_query($db_conn,"update user set name ='$username', email ='$useremail'where user_id='$userids'");
+  $add = mysqli_query($db_conn,"update users set name ='$username', email ='$useremail'where user_id='$userids'");
 
 	if($add){
 		echo json_encode(["success"=>true]);

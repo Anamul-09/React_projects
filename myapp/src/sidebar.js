@@ -28,6 +28,11 @@ function Sidebar(){
         <li className="nav-item">
         <Link to="/LifeCycle" className='nav-link'>LifeCycle</Link>
         </li>
+
+        <li className="nav-item">
+        <Link to="/UserList" className='nav-link'>UserList</Link>
+        </li>
+       
        
       </ul>
       <hr className="d-sm-none"/>

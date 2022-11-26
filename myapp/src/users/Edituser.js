@@ -19,7 +19,7 @@ const Edituser = (props) => {
     try {
       event.preventDefault();
       event.persist();
-      axios.post(`http://292.468.0.305/Apicrud/editusers.php`, { 
+      axios.post(`http://localhost/anamul/React_projects/userApiCrud/editusers.php`, { 
         username: userInfo.name,
         useremail: userInfo.email,
         userids: props.list.user_id,

@@ -16,7 +16,7 @@ const Edit = () => {
   const [isloaduser, setloaduser] = useState(false);
   const edituserlist = async (ids) => {
     try {
-      axios.post(`http://292.468.0.305/Apicrud/getusers.php`, { 
+      axios.post(`http://localhost/anamul/React_projects/userApiCrud/editusers.php`, { 
         userids: ids,
       })
       .then(res => {

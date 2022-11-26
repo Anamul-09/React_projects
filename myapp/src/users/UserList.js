@@ -12,7 +12,7 @@ const UserList = () => {
   const [isuser, setuser] = useState([]);
   const alluser = async (ids) => {
     try {
-      axios.get(`http://localhost/anamul/React_Project/userApiCrud/users.php`)
+      axios.get(`http://localhost/anamul/React_projects/userApiCrud/users.php`)
       .then(res => {
         console.log(res.data.userlist.userdata)
         setuser(res.data.userlist.userdata);
@@ -27,7 +27,7 @@ const UserList = () => {
   };
   const deleteUser = async (id) => {
     try {
-      axios.post(`http://292.468.0.305/Apicrud/deleteusers.php`, { 
+      axios.post(`http://localhost/anamul/React_projects/userApiCrud/deleteusers.php`, { 
         userids: id,
       })
       .then(res => {
@@ -55,8 +55,8 @@ const UserList = () => {
         <td>{item.email}</td>
         <td>
         
-        <Link  to={`edit/${item.id}`} className="btn default-btn"> Edit </Link>
-        <span onClick={() => deleteConfirm(item.id)} className="btn default-btn"> Delete </span> 
+        <Link  to={`edit/${item.id}`} className="btn btn-info"> Edit </Link>
+        <span onClick={() => deleteConfirm(item.id)} className="btn btn-danger"> Delete </span> 
         </td>
       </tr>
       ))}
