@@ -47,7 +47,7 @@ export default function Header() {
             <Link to="/Services" className="nav-item nav-link active">Services</Link>
             <Link to="/Projects" className="nav-item nav-link active">Projects</Link>
             <Link to="/Users" className="nav-item nav-link active">Users</Link>
-            <Link to="/Product" className="nav-item nav-link active">Product</Link>
+            <Link to="/product" className="nav-item nav-link active">Product</Link>
                 
                 
                 

@@ -17,6 +17,7 @@ import Users from './componant/Users';
 import Edit from './componant/Edit';
 import Insert from './componant/Insert';
 import Product from './componant/products/Allproduct';
+import AddProduct from './componant/products/AddProduct';
 import App from './App';
 
 
@@ -33,7 +34,8 @@ export default function RouterApp(){
       <Route path='/Services' element={<Services/>}/>
       <Route path='/Users' element={<Users/>}/>
       <Route path='/Projects' element={<Projects/>}/>
-      <Route path='/Product' element={<Product/>}/>
+      <Route path='/product' element={<Product/>}/>
+      <Route path='/product/new' element={<AddProduct/>}/>
       <Route path='/Features' element={<Features/>}/>
       <Route path='/FreeQuote' element={<FreeQuote/>}/>
       <Route path='/Team' element={<Team/>}/>
