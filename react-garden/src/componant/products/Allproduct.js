@@ -42,8 +42,7 @@ const Product = () => {
     <div>
       <div
         className="container-fluid page-header py-5 mb-5 wow fadeIn"
-        data-wow-delay="0.1s"
-      >
+        data-wow-delay="0.1s">
         <div className="container text-center py-5">
           <h1 className="display-3 text-white mb-4 animated slideInDown">
             products Page
@@ -75,15 +74,16 @@ const Product = () => {
                 <th>Action</th>
               </tr>
             </thead>
-            {product.map((item, index) => (
               <tbody>
+            {product.map((item, index) => (
                 <tr>
                   <td>{item.id}</td>
                   <td>{item.name}</td>
                   <td>{item.details}</td>
                   <td>{item.price}</td>
                   <td>
-                    <button className="btn btn-info">Edit</button>
+                    {/* <button to={`/pruducts/pid/${item.id}`} className="btn btn-info">Edit</button> */}
+                    <Link to={`/product/edit/${item.id}`} className="btn btn-info">Edit</Link>
                     <button
                       onClick={() => delconfirm(item.id)}
                       className="btn btn-danger"
@@ -92,14 +92,11 @@ const Product = () => {
                     </button>
                   </td>
                 </tr>
-              </tbody>
             ))}
+            </tbody>
           </table>
 
-          <Link to="/product/new" className="btn btn-secondary">
-            {" "}
-            Add new{" "}
-          </Link>
+          <Link to="/product/new" className="btn btn-secondary">Add new</Link>
         </div>
       </div>
     </div>

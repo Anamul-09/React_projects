@@ -69,7 +69,7 @@ export default function Users() {
         <th>Email</th>
         <th>Acton</th>
     </tr>
-    {isuser.map((item,index)=>(
+    {isuser.map((item, index)=>(
         
     <tr key={item.id}>
         <td>{index+1}</td>
