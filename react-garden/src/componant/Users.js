@@ -58,9 +58,9 @@ export default function Users() {
     </div>
     
 
+    <div className="container py-5">
     <Link to="/insert" className='btn btn-primary'> Create User </Link>
     <hr/>
-    <div className="container-xxl py-5">
    <h1>Users List</h1>
    <table className=' table table-striped'>
     <tr>
@@ -69,15 +69,15 @@ export default function Users() {
         <th>Email</th>
         <th>Acton</th>
     </tr>
-    {isuser.map((item, index)=>(
+    {isuser.map((item,index)=>(
         
     <tr key={item.id}>
         <td>{index+1}</td>
         <td>{item.name}</td>
         <td>{item.email}</td>
         <td>
-          <span><Link  to={`Edit/${item.id}`} className="btn btn-primary mx-2"> Edit </Link></span>
-          <span  onClick={() => deleteConfirm(item.id)} className="btn btn-danger"> Delete </span> </td>
+          <span><Link  to={`Edit/${item.id}`} className="btn btn-info"> Edit </Link></span>
+          <span onClick={() => deleteConfirm(item.id)} className="btn btn-danger"> Delete </span> </td>
     </tr>
     
    ))}

@@ -16,50 +16,55 @@ import Test from './componant/Test';
 import Users from './componant/Users';
 import Edit from './componant/Edit';
 import Insert from './componant/Insert';
-import Product from './componant/products/Allproduct';
-import AddProduct from './componant/products/AddProduct';
-import EditProduct from './componant/products/EditProduct';
+import Products from './componant/Product/Products';
+import AddProduct from './componant/Product/addProduct';
+import EditProduct from './componant/Product/EditProduct';
 import App from './App';
 
 
 export default function RouterApp(){
-  return (
-    <BrowserRouter>
-    
-    <Routes>
-    <Route path='/' element={< App/>}>
-      <Route index element={<Home/>}/>
-      <Route path='/About' element={<About/>}/>
-      <Route path='/Test' element={<Test/>}/>
-      <Route path='/Contact' element={<Contact/>}/>
-      <Route path='/Services' element={<Services/>}/>
-      <Route path='/Users' element={<Users/>}/>
-      <Route path='/Projects' element={<Projects/>}/>
-      <Route path='/product' element={<Product/>}/>
-      <Route path='/product/new' element={<AddProduct/>}/>
-      <Route path='/product/edit/:pid' element={<EditProduct/>}/>
-      <Route path='/Features' element={<Features/>}/>
-      <Route path='/FreeQuote' element={<FreeQuote/>}/>
-      <Route path='/Team' element={<Team/>}/>
-      <Route path='/Testimonial' element={<Testimonial/>}/>
-      <Route path='/Users/Edit/:ids' element={<Edit/>}/>
-      <Route path='/Insert' element={<Insert/>}/>
-      
-    
-      
 
+ 
+ 
 
+ 
+
+    return (
+      <BrowserRouter>
       
-     
-      </Route>
-    </Routes>
+      <Routes>
+      <Route path='/' element={< App/>}>
+        <Route index element={<Home/>}/>
+        <Route path='/About' element={<About/>}/>
+        <Route path='/Test' element={<Test/>}/>
+        <Route path='/Contact' element={<Contact/>}/>
+        <Route path='/Services' element={<Services/>}/>
+        <Route path='/Users' element={<Users/>}/>
+        <Route path='/Projects' element={<Projects/>}/>
+        <Route path='/Features' element={<Features/>}/>
+        <Route path='/FreeQuote' element={<FreeQuote/>}/>
+        <Route path='/Team' element={<Team/>}/>
+        <Route path='/Testimonial' element={<Testimonial/>}/>
+        <Route path='/Users/Edit/:ids' element={<Edit/>}/>
+        <Route path='/Insert' element={<Insert/>}/>
+        <Route path='/Products' element={<Products/>}/>
+        <Route path='/addProduct' element={<AddProduct/>}/>
+        <Route path='/product/edit/:pid' element={<EditProduct/>}/>
+       
+       
+        </Route>
+      </Routes>
+  
+      </BrowserRouter>
+    )
+ 
+  
 
-    </BrowserRouter>
-  )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   
     <RouterApp />
   
