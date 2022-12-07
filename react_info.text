@@ -1,0 +1,3 @@
+ 		 <--------React Modals-------->
+1. npn i bootstrap@5 --save
+2.npm i reactstrap --save (version 9.5.5)
