@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Componant/Login";
 import Home from "./Componant/Home";
 import Register from "./Componant/Register";
+import Dashboard from "./Componant/Dashboard";
 
 export default function RouterApp() {
   return (
@@ -18,6 +19,7 @@ export default function RouterApp() {
             <Route path="Home" element={<Home />} />
             <Route path="Login" element={<Login />} />
             <Route path="Register" element={<Register />} />
+            <Route path="Dashboard" element={<Dashboard />} />
           </Route>
         </Routes>
       </BrowserRouter>

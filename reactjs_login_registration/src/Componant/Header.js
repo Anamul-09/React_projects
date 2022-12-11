@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  let navigate = useNavigate();
+  const email = sessionStorage.getItem("email");
+  const logOut = () => {
+    sessionStorage.clear();
+    navigate("/Login");
+  };
+
   return (
     <div>
       <div className="p-5 bg-primary text-white text-center">
@@ -28,6 +36,16 @@ export default function Header() {
               </Link>
             </li>
           </ul>
+          <span className="navbar-text"></span>
+          {email ? (
+            <a onClick={logOut} className="nav-link active text-white" href="">
+              Logout
+            </a>
+          ) : (
+            <a className="nav-link active text-white" href="/Login">
+              Login
+            </a>
+          )}
         </div>
       </nav>
     </div>

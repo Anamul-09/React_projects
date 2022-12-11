@@ -20,6 +20,7 @@ export default function Register() {
         if (res.data) {
           // console.log(res.data);
           alert(res.data);
+          navigation("/Login");
         }
       });
   };
