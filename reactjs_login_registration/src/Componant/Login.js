@@ -21,13 +21,14 @@ export default function Login() {
         user
       )
       .then((response) => {
+        console.log(response.data);
         if (response.data.success) {
           // alert(response.data.success);
           console.log(response.data.user.email);
           sessionStorage.setItem("email", response.data.user.email);
           navigate("/Dashboard");
         } else {
-          alert(response.data.user.error);
+          alert(response.data.error);
         }
       });
   };

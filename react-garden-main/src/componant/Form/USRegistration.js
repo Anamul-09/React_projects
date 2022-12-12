@@ -35,48 +35,48 @@ export default function USRegistration() {
   }
 
   return (
-    <div class="container mt-3 form">
+    <div className="container mt-3 form">
       {/* <Modal isOpen={info.modal}> */}
       <h2 className="text-center">Registration Form</h2>
       <form onSubmit={formSubmit} className="col-lg-8 m-auto">
-        <div class="mb-3 mt-3">
+        <div className="mb-3 mt-3">
           <label for="name">Name:</label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="name"
             onChange={changValue}
             placeholder="Enter name"
             name="name"
           />
         </div>
-        <div class="mb-3 mt-3">
+        <div className="mb-3 mt-3">
           <label for="name">Address:</label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="address"
             onChange={changValue}
             placeholder="Enter Address"
             name="address"
           />
         </div>
-        <div class="mb-3 mt-3">
+        <div className="mb-3 mt-3">
           <label for="email">Email:</label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="email"
             onChange={changValue}
             placeholder="Enter email"
             name="email"
           />
         </div>
-        <div class="mb-3 mt-3">
+        <div className="mb-3 mt-3">
           <label for="name">Phone:</label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="phone"
             onChange={changValue}
             placeholder="Enter phone number"
@@ -84,25 +84,25 @@ export default function USRegistration() {
           />
         </div>
 
-        <div class="mb-3">
+        <div className="mb-3">
           <label for="pwd">Password:</label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="pwd"
             placeholder="Enter password"
             onChange={changValue}
             name="password"
           />
         </div>
-        <div class="form-check mb-3">
+        <div className="form-check mb-3">
           <Link to="/USLogin" className="log">
             Already have an account.<a href="">Login</a>
           </Link>
         </div>
         <Button
           type="submit"
-          class="btn btn-primary "
+          className="btn btn-primary "
           style={{ width: "100%" }}
         >
           Submit

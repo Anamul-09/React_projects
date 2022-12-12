@@ -37,34 +37,38 @@ export default function AddLogin() {
   }
 
   return (
-    <div class="container mt-3 form">
+    <div className="container mt-3 form">
       <h2 className="text-center">Login Form</h2>
       <form onSubmit={handleSubmit} className="col-lg-8 m-auto">
-        <div class="mb-3 mt-3">
+        <div className="mb-3 mt-3">
           <label for="email">Email:</label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="email"
             onChange={handleChange}
             placeholder="Enter email"
             name="email"
           />
         </div>
-        <div class="mb-3">
+        <div className="mb-3">
           <label for="pwd">Password:</label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="pwd"
             onChange={handleChange}
             placeholder="Enter password"
             name="password"
           />
         </div>
-        <div class="form-check mb-3">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" name="remember" />{" "}
+        <div className="form-check mb-3">
+          <label className="form-check-label">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              name="remember"
+            />{" "}
             Remember me
           </label>
 
@@ -74,7 +78,7 @@ export default function AddLogin() {
         </div>
         <Button
           type="submit"
-          class="btn btn-primary "
+          className="btn btn-primary "
           style={{ width: "100%" }}
         >
           Submit
