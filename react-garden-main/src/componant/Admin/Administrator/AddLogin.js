@@ -28,7 +28,6 @@ export default function AddLogin() {
 
         if (res.data.status === 200) {
           localStorage.setItem("email", res.data.email);
-          localStorage.setItem("password", res.data.password);
           navigate("/admin");
         } else {
           alert("Try with another password");

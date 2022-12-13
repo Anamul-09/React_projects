@@ -1,8 +1,12 @@
 import "./App.css";
 import Header from "./components/Header";
 import ProductList from "./components/ProductList";
+import { BrowserRouter } from "react-router-dom";
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
 import CartList from "./components/CartList";
 import { useState, useEffect } from "react";
+
 import axios from "axios";
 
 function App() {
@@ -76,16 +80,30 @@ function App() {
   const handleShow = (value) => {
     setShowCart(value);
   };
+  // const reportShow = (value) => {
+  //   alert("Clicked");
+  // };
 
   return (
     <div>
       <Header count={cart.length} handleShow={handleShow}></Header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/cart" element={<CartList cart={cart}></CartList>} />
 
-      {showCart ? (
-        <CartList cart={cart}></CartList>
-      ) : (
-        <ProductList product={product} addToCart={addToCart}></ProductList>
-      )}
+          <Route
+            path="/"
+            element={
+              <ProductList
+                product={product}
+                addToCart={addToCart}
+              ></ProductList>
+            }
+          />
+
+          <Route />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

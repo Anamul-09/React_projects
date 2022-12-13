@@ -1,57 +1,66 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export default class Addheader extends Component {
-  constructor(props) {
-    // console.log(props)
-    super(props);
-    this.props = {};
-  }
-  render() {
-    return (
-      <div>
-        <nav className=" row navbar navbar-expand-sm bg-dark navbar-dark">
-          <div className="col-sm-9 ">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link to="/admin" className="nav-link text-white active">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="Users" className="nav-link text-white">
-                  Users
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="Products" className="nav-link text-white">
-                  Products
-                </Link>
-              </li>
+export default function Addheader() {
+  let navigate = useNavigate();
+  const email = sessionStorage.getItem("email");
+  const logOut = () => {
+    sessionStorage.clear();
+    navigate("AddLogin");
+  };
 
-              <li className="nav-item">
-                <Link to="Cars" className="nav-link text-white">
-                  Cars
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="colors" className="nav-link text-white">
-                  Colors
-                </Link>
-              </li>
+  return (
+    <div>
+      <nav className=" row navbar navbar-expand-sm bg-dark navbar-dark">
+        <div className="col-sm-9 ">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to="/admin" className="nav-link text-white active">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="Users" className="nav-link text-white">
+                Users
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="Products" className="nav-link text-white">
+                Products
+              </Link>
+            </li>
 
-              <li className="nav-item">
-                <Link to="search" className="nav-link text-white">
-                  Search
-                </Link>
-              </li>
-              <li className="nav-item"></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    );
-  }
+            <li className="nav-item">
+              <Link to="Cars" className="nav-link text-white">
+                Cars
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="colors" className="nav-link text-white">
+                Colors
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="search" className="nav-link text-white">
+                Search
+              </Link>
+            </li>
+            <li className="nav-item">
+              <a
+                onClick={logOut}
+                className="nav-link active text-white"
+                href=""
+              >
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  );
 }
 
 // function Header(props) {

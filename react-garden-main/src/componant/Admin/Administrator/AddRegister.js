@@ -26,7 +26,7 @@ export default function AddRegister() {
       )
       .then((res) => {
         if (res.data.success) {
-          navigate("/login");
+          navigate("/Addlogin");
         }
         alert(res.data.msg);
       });

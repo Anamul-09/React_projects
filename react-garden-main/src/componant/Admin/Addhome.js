@@ -1,4 +1,15 @@
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 function Addhome() {
+  let navigate = useNavigate();
+  const auth = sessionStorage.getItem("email");
+  useEffect(() => {
+    if (auth == null) {
+      navigate("/AddLogin");
+    }
+  }, []);
+
   return (
     <div className="col-sm-8">
       <h2>TITLE HEADING</h2>

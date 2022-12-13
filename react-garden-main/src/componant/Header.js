@@ -113,13 +113,9 @@ export default function Header() {
             </Link>
           </div>
           <div className="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">
-            <Link to="/AddLogin" className="logg ">
+            <Link to="/admin" className="logg ">
               Admin
             </Link>
-            /
-            <a href="" className="logg">
-              Logout
-            </a>
           </div>
         </div>
       </nav>
