@@ -1,10 +1,6 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = "";
-$dbname = "reactjs_axios_fileupload";
 
-$db_con = mysqli_connect($host, $user, $password, $dbname);
+include("db_connect.php");
 
 
 header('Content-Type: application/json; charset=utf-8');
@@ -31,12 +27,16 @@ if (isset($_POST["mydata"]) && isset($_FILES["mydata1"])) {
 
     $url = "uploads/";
 
-    move_uploaded_file($photo_temp_name, $url . $photo_name);
+    $photopath = $url . $photo_name;
+    $photo_name = time() . $photo_name;
 
-    $sql = "insert into users (username, name, photo) values ('$username', '$name', '$photo_name')";
-    mysqli_query($db_con, $sql);
+    if (empty($error) == true) {
+        move_uploaded_file($photo_temp_name, $url . $photo_name);
+        $sql = mysqli_query($db_con, "INSERT INTO users (username, name, photo) VALUES('$username', '$name', '$photopath')");
+        // mysqli_query($db_con, $sql);
 
-    echo json_encode("Successfully upload");
+    }
+    echo json_encode(["msg" => "Successfully upload"]);
 } else {
     echo json_encode("First select file and enter submit");
 }

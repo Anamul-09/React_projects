@@ -33,7 +33,7 @@ export default function UploadForm() {
 
     axios
       .post(
-        "http://localhost/anamul/React_projects/reactjs_axios_fileupload/api/newupload.php",
+        "http://localhost/anamul/React_projects/reactjs_axios_fileupload1/api/newupload.php",
         datas,
         {
           header: {
